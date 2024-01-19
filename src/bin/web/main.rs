@@ -1,4 +1,5 @@
 use dotenv::dotenv;
+use community_v2::config::config;
 
 use crate::router::router;
 
@@ -14,5 +15,7 @@ async fn main() {
 
     let app = router();
     let listener = tokio::net::TcpListener::bind("0.0.0.0:8080").await.unwrap();
+
+    println!("{:?}", config());
     axum::serve(listener, app).await.unwrap()
 }
