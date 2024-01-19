@@ -29,6 +29,8 @@ eventstore = { version = "2.3.0" }
 name = "web"
 path = "./src/bin/web/main.rs"
 
-
 [lints.rust]
 unsafe_code="forbid"
+
+[sqlx]
+migration_dir = "migrations/relational"

@@ -8,7 +8,7 @@ pub struct EventStoreRepository {
 
 impl EventStoreRepository {
     pub fn new() -> Self {
-        let settings = config().eventstoredb_url.parse().unwrap()
+        let settings = config().eventstoredb_url.parse().unwrap();
         Self {
             client: Client::new(settings).unwrap(),
         }

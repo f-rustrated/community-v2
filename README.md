@@ -1,7 +1,22 @@
 # Installation(MAC)
-## Run EventStoreDB 
+## Run EventStoreDB and PostgreSQL
 ```shell
 docker-compose up -d 
+```
+
+## Run Application 
+```shell
+cargo run --bin web
+```
+
+- To migrate, run below command 
+```
+cargo sqlx migrate run --database-url postgres://frustacean:abc123@localhost:5434/community
+```
+
+- After adding queries, run below command 
+```shell
+cargo sqlx prepare --database-url postgres://frustacean:abc123@localhost:5434/community 
 ```
 
 ## EventStoreDB Admin UI 
