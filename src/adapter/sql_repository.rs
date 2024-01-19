@@ -5,7 +5,7 @@ use sqlx::{PgConnection, PgPool, Postgres, Transaction};
 use sqlx::postgres::PgPoolOptions;
 
 use crate::config::config;
-use crate::service::cross_cutting_traits::TransactionUnitOfWork;
+use crate::service::cross_cutting_trait::TransactionUnitOfWork;
 use crate::service::response::BaseError;
 
 pub struct SqlRepository {
