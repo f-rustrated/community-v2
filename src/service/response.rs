@@ -1,5 +1,6 @@
 use serde::Serialize;
 use serde_json::Value;
+use crate::domain::account::errors::AccountError;
 
 // TODO define service error for fallible service operation
 #[derive(Debug, Serialize)]
@@ -13,6 +14,7 @@ pub enum BaseError {
 
 #[derive(Debug, Serialize)]
 pub enum ServiceError {
+    AccountError(AccountError),
     BaseError(BaseError),
     UnAuthorized(String),
     AuthenticationError(String),
