@@ -8,6 +8,10 @@ docker-compose up -d
 ```shell
 cargo run --bin web
 ```
+- Install sqlx-cli 
+```shell
+cargo install sqlx-cli
+```
 
 - To migrate, run below command 
 ```
