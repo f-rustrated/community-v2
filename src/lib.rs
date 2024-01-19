@@ -1,4 +1,4 @@
-pub mod adapter;
-pub mod domain;
-pub mod service;
+pub(crate) mod adapter;
+pub(crate) mod domain;
+pub(crate) mod service;
 pub mod config;
